@@ -2,13 +2,22 @@
 
 /* Estilos globales */
 * {
-    background-color: #2c2b47;
+    background-color: #1e1d2b;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    body { --scrollbar-width: 15px; --scrollbar-height: 15px; --scrollbar-border-radius: 36px; --scrollbar-border-thickness: 0px; --scrollbar-thumb-color: #463d7f5d; --scrollbar-track-color: #FFFFFF00; --scrollbar-border-color: #FFFFFF00; --scrollbar-corner-color: #FFFFFF00; --scrollbar-button-color: #3F3F4600; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); }
+    scroll-behavior: smooth;
 }
 
+.navdiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
 
 .navbar > * {
     width: 20vw; 
@@ -16,13 +25,22 @@
     padding-right: 20px;
     color: #fff;
     text-decoration: none;
+
 }
+
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 70px;
+    width: 100%;
+}
+
+hr{
+    
+    width: 100%;
+    border-color:#ff702a ;
 }
 
 .title>* {
@@ -33,11 +51,11 @@ nav {
 }
 
 
-.inicio , .about {
+.inicio , .about, .foodMenu , .services, .contact, footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 150px;
+    padding: 100px;
 }
 
 .homeSec, .aboutSec {
@@ -46,6 +64,7 @@ nav {
 
 
 .mainTxt {
+    font-weight: 500;
     color: #ff702a;
     font-size: 7em;
 }
@@ -61,9 +80,10 @@ nav {
     font-size: 1.5em; 
 }
 
-.aboutTitle {
+.subTitle {
     color: #ff702a;
     font-size: 1.5em;
+    font-weight: 450;
 }
 
 
@@ -81,7 +101,8 @@ nav {
     color: #fff;
     text-decoration: none;
     background-color: transparent;
-    font-size: 1.5em;
+    font-size: 1.2em;
+   
 }
 
 
@@ -94,5 +115,141 @@ nav {
 .aboutTxt{
     color: #fff;
     font-size: 3.1em;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.foodMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+}
+.producto{
+    
+    background-image: url(../img/cuadrado.png);
+    width: 420px;
+    height: 420px;
+    background-size: 100%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cajita{
+    align-self: flex-end;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.producto>*{
+    background: transparent;
+    font-weight: 500;
+}
+.foodPic, .serPic{
+    width: 250px;
+}
+
+.precio{
+    color: #ff702a;
+    
+}
+.products i{
+    position:absolute;
+    align-self: flex-end   ;
+    padding-right: 37px;
+    padding-top: 25px;
+    
+}
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicios{
+    display: flex;
+    flex-direction: row;
+}
+.servicio{
+    
+    
+    width: 420px;
+    height: 420px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.servicio h3{
+    color: #ff702a;
+    font-size: 1.25px;
+    font-weight: 500;
+}
+
+.descriptionSer{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.25em;
+}
+
+.contact {
+    background-image: url(../img/cajota.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    height: 300px;
+    width: 85%;
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    
+}
+
+
+
+.contact h3{
+    background: transparent;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: #1e1d2b;
+    justify-content: space-around;
+    
+}
+.pies>*{
+    background-color: #1e1d2b; 
+    display: flex;
+    flex-direction:column ;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.pies h3{
+    font-size: 25px;
+}
+footer hr{
+    width: 40px;
+    background-color: #1e1d2b;
+    margin-bottom: 20px;
+
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+ 
+    
+}
+.iconos i{
+    color: #ff702a;
 }
