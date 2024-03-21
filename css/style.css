@@ -321,6 +321,9 @@ footer hr {
   .navbar > * {
     font-size: 1em;
   }
+  .jump {
+    font-size: 0.7em;
+  }
 }
 
 @media (max-width: 768px) {
